@@ -1,1 +1,1 @@
-# Web-Tech-D-Spring-21
+# A repository to host class works for Web Technology Course
