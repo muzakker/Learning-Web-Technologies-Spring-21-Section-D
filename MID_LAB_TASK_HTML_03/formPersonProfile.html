@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Form</title>
+</head>
+<body>	
+	<fieldset style="width:500px">
+	<table border="1" width="100%">
+		
+		<tr height="60px">
+			<td colspan="3" align="center">
+				<h1>PERSON PROFILE</h1>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Name
+			</td>
+			<td>
+				<input type="text" name="name" value="" placeholder="Name">
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Email
+			</td>
+			<td>
+				<input type="email" name="email" value=""> 
+				<button title="hint: sample@example.com" style="color: blue; font-size: 14px;"><b>i</b></button>
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Gender
+			</td>
+			<td>
+				<input type="radio" name="gender" value="male"> Male
+				<input type="radio" name="gender" value="female"> Female
+				<input type="radio" name="gender" value="other"> Other
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Date of Birth
+			</td>
+			<td>
+				<input type="text" name="dd" size="2" value=""> / <input type="text" name="mm" size="2" value="">	/ <input type="text" name="yyyy" size="4" value=""> <i>(dd/mm/yyyy)</i>
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Blood Group
+			</td>
+			<td>
+				<select name="bloodGroup" >
+				<option value="A+" selected>A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+			</select>
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Degree
+			</td>
+			<td>
+				<input type="checkbox" name="degree[]" value="SSC"> SSC
+				<input type="checkbox" name="degree[]" value="HSC"> HSC
+				<input type="checkbox" name="degree[]" value="BSc"> BSc.
+				<input type="checkbox" name="degree[]" value="MSc"> MSc.
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td>
+				Picture
+			</td>
+			<td>
+				<input type="file" name="img" value="">
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr height= "40px">
+			<td colspan="3">
+			</td>
+		</tr>
+		
+		<tr height="40px">
+			<td colspan="3" align="right">
+				<input type="submit" name="submit" value="Submit">
+				<input type="reset" name="reset" value="Reset">
+			</td>
+		</tr>
+	</table>
+	</fieldset>
+</body>
+</html>
