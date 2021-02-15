@@ -16,10 +16,10 @@
 			}
 			echo $elements[$row][$col];
 		}
-		echo "\n";
+		echo "<br>";
 	}
 	
-	echo "\n";
+	echo "<br>";
 	
 	for($row = 0; $row < $elements_no; $row++){
 		$row_elements = count($elements[$row]);
@@ -28,7 +28,7 @@
 				echo $elements[$row][$col];
 			}
 		}
-		echo "\n";
+		echo "<br>";
 	}
 	
 ?>
