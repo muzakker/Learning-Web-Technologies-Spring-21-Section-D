@@ -8,6 +8,8 @@
 		}else{
 			echo "<b>Email: </b>".$email;
 		}
+	}else{
+		echo "invalid submission";
 	}
 
 ?>
