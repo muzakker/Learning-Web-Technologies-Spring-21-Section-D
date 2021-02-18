@@ -29,7 +29,7 @@
 			<input type="checkbox" name="degree[]" value="BSc"
 			<?php
 				if(isset($_POST['submit'])){
-					if($_POST['degree'] == "BSC"){
+					if($_POST['degree'] == "BSc"){
 						echo "checked";
 					}
 				}
@@ -38,7 +38,7 @@
 			<input type="checkbox" name="degree[]" value="MSc"
 			<?php
 				if(isset($_POST['submit'])){
-					if($_POST['degree'] == "MSC"){
+					if($_POST['degree'] == "MSc"){
 						echo "checked";
 					}
 				}
