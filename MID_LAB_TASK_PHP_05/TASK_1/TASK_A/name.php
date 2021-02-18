@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
 	if ($name == "") {
 		echo "null submission...";
 	} else {
-		echo $name;
+		echo "<b>Name: </b>".$name;
 	}
 } else {
 	echo "invalid request...";
