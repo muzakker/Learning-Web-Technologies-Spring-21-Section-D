@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML form</title>
+</head>
+
+<body>
+	<form method="POST" action="loginCheck.php">
+		<fieldset style="width:300px;">
+			<legend><b>LOGIN</b></legend>
+			<table>
+				<tr>
+					<td>User Name :</td>
+					<td><input type="text" name="username"></td>
+				</tr>
+				<tr>
+					<td>Password &nbsp; :</td>
+					<td><input type="password" name="password"></td>	
+				</tr>
+				<tr>
+					<td colspan="2">
+					<hr>
+					<input type="checkbox" name="remember_me" value="YES">Remember Me
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<br>
+					<input type="submit" name="submit" value="Submit">
+					&nbsp; <u style="color:blue;">Forgot Password?</u>
+					</td>
+				</tr>		
+			</table>
+		</fieldset>
+	</form>
+</body>
+
+</html>
