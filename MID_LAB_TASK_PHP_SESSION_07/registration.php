@@ -1,3 +1,51 @@
+<?php
+	session_start();
+
+	if(isset($_POST['submit'])){
+
+		$username 		= $_POST['username'];
+		$name 			= $_POST['name'];
+		$email 			= $_POST['email'];
+		$password 		= $_POST['password'];
+		$confirmPass 	= $_POST['confirmPass'];
+		$gender 		= $_POST['gender'];
+		$day 			= $_POST['dd'];
+		$month 			= $_POST['mm'];
+		$year 			= $_POST['yyyy'];
+
+		if($username == "" || $name == "" || $email == "" || $password == ""
+			|| $confirmPass == "" || $gender == "" || $day == "" || $month == ""
+			|| $year == ""){
+			
+			echo "invalid information...please try again!";
+			
+		}else{
+
+			if($password == $confirmPass){
+
+				//store user information
+				$user = [
+							'name'		=>$name, 
+							'username'	=>$username, 
+							'email'		=>$email, 
+							'password'	=>$password,
+							'gender'	=>$gender,
+							'day'		=>$day,
+							'month'		=>$month,
+							'year'		=>$year
+						];
+
+				$_SESSION['user'] = $user;
+
+				header('location: login.php');
+				
+			}else{
+				echo "password & confirm password mismatch...";
+			}
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
