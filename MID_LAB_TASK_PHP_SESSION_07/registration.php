@@ -13,7 +13,7 @@
 			</td>
 			
 			<td align="right">
-				<a href="#">Home</a> | <a href="login.php">Login</a> | <a href="registration.php">Registration</a>
+				<a href="publicHome.php">Home</a> | <a href="login.php">Login</a> | <a href="#">Registration</a>
 			</td>
 		</tr>
 		
