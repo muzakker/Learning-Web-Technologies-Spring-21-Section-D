@@ -1,3 +1,39 @@
+<?php
+	session_start();
+
+	if(isset($_POST['submit'])){
+		
+		$name 			= $_POST['name'];
+		$email 			= $_POST['email'];
+		$gender 		= $_POST['gender'];
+		$day 			= $_POST['dd'];
+		$month 			= $_POST['mm'];
+		$year 			= $_POST['yyyy'];
+
+		if($name == "" || $email == "" || $gender == "" 
+		|| $day == "" || $month == "" || $year == ""){
+			
+			echo "invalid information...please try again!";
+			
+		}else{
+				//store user information
+				$user = [
+							'name'		=>$name, 
+							'email'		=>$email, 
+							'gender'	=>$gender,
+							'day'		=>$day,
+							'month'		=>$month,
+							'year'		=>$year
+						];
+
+				$_SESSION['user'] = $user;
+
+				header('location: viewProfile.php');
+				
+			}
+		}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +53,7 @@
 			</td>
 		</tr>
 		
-		<tr style="height:200px;">
+		<tr style="height:400px;">
 			<td>
 				<br>
 				<b>Account</b>
@@ -32,8 +68,81 @@
 				</ul>
 			</td>
 			
-			<td>
-				
+			<td align="center">
+				<form method="POST" action="#">
+					<fieldset style="width:400px;">
+						<legend><b>EDIT PROFILE</b></legend>
+							<table>
+								<tr>
+									<td>
+										Name
+									</td>
+									<td>
+										<input type="text" name="name" value="">
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<hr>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										Email
+									</td>
+									<td>
+										<input type="email" name="email" value=""> 
+										<button title="hint: sample@example.com" style="color: blue; font-size: 14px;"><b>i</b></button>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<hr>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<fieldset style="width:400px;">
+										<legend>Gender</legend>
+											<input type="radio" name="gender" value="male"> Male
+											<input type="radio" name="gender" value="female"> Female
+											<input type="radio" name="gender" value="other"> Other
+										</fieldset>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<hr>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<fieldset style="width:400px;">
+										<legend>Date of Birth</legend>
+										<input type="number" name="dd" style="width:40px;" value=""> / <input type="number" name="mm" style="width:40px;" value="">	/ <input type="number" name="yyyy" style="width:60px;" value=""> <i>(dd/mm/yyyy)</i>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<hr>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="2">
+										<input type="submit" name="submit" value="Submit">
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+				</form>
 			</td>
 		</tr>
 		
