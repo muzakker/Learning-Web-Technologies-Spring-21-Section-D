@@ -39,7 +39,42 @@
 			</td>
 			
 			<td>
-				
+				<fieldset>
+					<legend><b>PROFILE</b></legend>
+					<table>
+						<tr>
+							<td>Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							<?php
+								echo $user['name'];
+							?>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							<?php
+								echo $user['email'];
+							?>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							<?php
+								echo $user['gender'];
+							?>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Date of Birth: 
+							<?php
+								echo $user['day']."/".$user['month']."/".$user['year'];
+							?>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
 			</td>
 		</tr>
 		
