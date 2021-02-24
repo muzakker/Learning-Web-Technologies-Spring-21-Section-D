@@ -1,5 +1,5 @@
 <?php
 	session_start();
 	unset($_SESSION['status']);
-	header('location: login.html');
+	header('location: login.php');
 ?>

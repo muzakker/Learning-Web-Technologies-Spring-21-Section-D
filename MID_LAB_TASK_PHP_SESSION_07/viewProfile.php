@@ -13,7 +13,13 @@
 			</td>
 			
 			<td align="right">
-				Logged in as <a href="#"><?php ?></a> | <a href="logout.php">Logout</a>
+				Logged in as <a href="home.php">
+				<?php
+					session_start();
+					$user = $_SESSION['user'];
+					echo $user['name'];
+				?>
+				</a> | <a href="logout.php">Logout</a>
 			</td>
 		</tr>
 		
