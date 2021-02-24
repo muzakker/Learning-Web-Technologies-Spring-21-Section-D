@@ -9,7 +9,7 @@
 	<table border="1" width="100%">
 		<tr>
 			<td>
-				<img src="logo.png" alt="logo" width="100px" height="100px">
+				<img src="logo.png" alt="logo" width="100px" height="50px">
 			</td>
 			
 			<td align="right">
