@@ -1,3 +1,33 @@
+<?php
+	session_start();
+
+	if(isset($_POST['submit'])){
+		
+		$currentPass	= $_POST['currentPass'];
+		$newPass		= $_POST['newPass'];
+		$rePass			= $_POST['rePass'];
+		
+		if($currentPass == "" || $newPass == "" || $rePass == ""){
+			
+			echo "invalid information...please try again!";
+			
+		}else{
+				if($currentPass != $newPass && $newPass === $rePass){
+					
+					$user = $_SESSION['user'];
+					$user['password'] = $newPass;
+					$_SESSION['user'] = $user;
+					
+					header('location: login.php');
+					
+				}else{
+					echo "Passwords do not match, Please Try Again";
+				}
+			}
+		}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +63,8 @@
 			<td>
 				<form method="POST" action="#">
 					<fieldset style="width:400px;">
-					<legend><b>CHANGE PASSWORD</b></legend>
+					<legend><b>CHANGE PASSWORD</b>
+					</legend>
 						<table>
 							<tr>
 								<td>Current Password &nbsp; &nbsp; &nbsp; &nbsp; :</td>

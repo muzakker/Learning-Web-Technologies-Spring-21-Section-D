@@ -43,34 +43,32 @@
 					<legend><b>PROFILE</b></legend>
 					<table>
 						<tr>
-							<td>Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-							<?php
-								echo $user['name'];
-							?>
+							<td>
+								Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+								<?php
+									echo $user['name'];
+								?>
+								<br>
+								Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+								<?php
+									echo $user['email'];
+								?>
+								<br>
+								Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+								<?php
+									echo $user['gender'];
+								?>
+								<br>
+								Date of Birth: 
+								<?php
+									echo $user['day']."/".$user['month']."/".$user['year'];
+								?>
 							</td>
-						</tr>
-						
-						<tr>
-							<td>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-							<?php
-								echo $user['email'];
-							?>
-							</td>
-						</tr>
-						
-						<tr>
-							<td>Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-							<?php
-								echo $user['gender'];
-							?>
-							</td>
-						</tr>
-						
-						<tr>
-							<td>Date of Birth: 
-							<?php
-								echo $user['day']."/".$user['month']."/".$user['year'];
-							?>
+							
+							<td align="center">
+								<img src="user.png" alt="<?php echo $user['name'];?>" height="100px" width="100px">
+								<br>
+								<a href="profilePicture.php">Change</a>
 							</td>
 						</tr>
 					</table>
