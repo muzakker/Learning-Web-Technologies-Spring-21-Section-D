@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Degree Validation</title>
+</head>
+<body>
+	
+	<form name="myForm" onsubmit="return(validate());">
+		<fieldset style="width:170px"> 
+            <legend>Degree</legend>
+            <input type="checkbox" name="degree[]" value="SSC"> SSC
+			<input type="checkbox" name="degree[]" value="HSC"> HSC
+			<input type="checkbox" name="degree[]" value="BSc"> BSc
+        </fieldset>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+	</form>
+	
+	<script>
+		function validate(){
+			var x = document.forms["myForm"]["degree[]"].value;
+			
+			if(x.length == ""){
+				alert("Please select at least one of the options.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
