@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gender Validation</title>
+</head>
+<body>
+	
+	<form name="myForm" onsubmit="return(validate());">
+		<fieldset style="width:200px">
+			<legend>Gender</legend>	
+			<input type="radio" name="gender" value="male"> Male
+			<input type="radio" name="gender" value="female"> Female
+			<input type="radio" name="gender" value="other"> Other 
+		</fieldset>
+		<br>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	
+	<script>
+		function validate(){
+			var x = document.myForm.gender.value;
+			
+			if(x == ""){
+				alert("Please, select your gender.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
