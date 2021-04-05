@@ -15,34 +15,12 @@
 	
 	<script>
 		function validate(){
-			var x = document.myForm.name.value;
-			var str = x.split(" ");
+			var x = document.myForm.mail.value;
 			
 			if(x == ""){
-				alert("Please, enter your name.");
-				document.myForm.name.focus();
+				alert("Please, provide your email.");
+				document.myForm.mail.focus();
 				return false;
-			}
-			if(str.length < 2){
-				alert("The Name should contain at least two words");
-				return false;
-			}
-			var itr;
-			for(itr = 0; itr < x.length; itr++){
-				if((x[itr] >= 'a' && x[itr] <= 'z') || 
-				(x[itr] >= 'A' && x[itr] <= 'Z') || (x[itr] == '.')
-				|| (x[itr] == '-') || (x[itr] == ' ')
-				){
-					continue;
-				}
-				else{
-					alert("Name can contain a-z or A-Z or dot(.) or dash(-) ONLY");
-					break;
-				}
-			}
-			if(!(x[0] >= 'a' && x[0] <= 'z') || 
-			!(x[0] >= 'A' && x[0] <= 'Z')){
-				alert("Name must start with a letter");
 			}
 		}
 	</script>
