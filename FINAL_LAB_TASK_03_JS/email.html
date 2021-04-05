@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Name Validation</title>
+	<title>Email Validation</title>
 </head>
 <body>
 	
 	<form name="myForm" onsubmit="return(validate());">
-		<b>Name</b> <br>
-		<input type="text" name="name" value=""> <br><br>
+		<b>Email</b> <br>
+		<input type="email" name="mail" value="">
+		<button title="hint: sample@example.com" style="color: blue; font-size: 14px;"><b>i</b></button>
+		<br><br>
 		<input type="submit" name="submit" value="Submit">
 	</form>
 	
@@ -35,14 +37,12 @@
 				}
 				else{
 					alert("Name can contain a-z or A-Z or dot(.) or dash(-) ONLY");
-					return false;
 					break;
 				}
 			}
 			if(!(x[0] >= 'a' && x[0] <= 'z') || 
 			!(x[0] >= 'A' && x[0] <= 'Z')){
 				alert("Name must start with a letter");
-				return false;
 			}
 		}
 	</script>
