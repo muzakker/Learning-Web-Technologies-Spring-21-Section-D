@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Group Validation</title>
+</head>
+<body>
+	
+	<form name="myForm" onsubmit="return(validate());">
+		<fieldset style="width:150px">
+            Blood Group
+            <select name="bloodGroup" >
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+			</select>
+			<hr>
+        </fieldset>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+	</form>
+	
+	<script>
+		function validate(){
+			var x = document.forms["myForm"]["bloodGroup"].value;
+			
+			if(x == ""){
+				alert("Please select at least one of the options.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
