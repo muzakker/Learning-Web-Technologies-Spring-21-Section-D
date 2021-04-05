@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Validation</title>
+</head>
+<body>
+	
+	<form name="myForm" onsubmit="return(validate());">
+		<fieldset style="width:400px">
+            <legend>Profile Picture</legend>
+            User Id
+			<input type="text" name="id" value=""> <br><br>
+			Picture
+			<input type="file" name="myPicture" value=""><hr>
+			<input type="submit" name="submit" value="Submit">
+		</fieldset>
+	</form>
+	
+	<script>
+		function validate(){
+			var x = document.forms["myForm"]["id"].value;
+			var id = parseInt(x);
+			var myFile = x = document.forms["myForm"]["myPicture"].value;
+			
+			if(id == ""){
+				alert("Please enter your id.");
+				return false;
+			}
+			if(!(id > 0)){
+				alert("UserId has to be a positive number");
+				return false;
+			}
+			if(myFile == ""){
+				alert("Please, select a picture.");
+				return false;
+			}			
+		}
+	</script>
+</body>
+</html>
